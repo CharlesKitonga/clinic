@@ -8,6 +8,8 @@ use App\About;
 use App\Service;
 use App\Home;
 use App\Review;
+use App\Gallery;
+use App\Appointment;
 use App\Contact;
 use App\Team;
 use App\Topic;
@@ -25,7 +27,13 @@ class PagesController extends Controller
         //fetch home details
         $homes = Home::first();
         $homes = json_decode(json_encode($homes));
-        return view('frontpages.index')->with(compact('homes','sliders', 'services'));
+        //fetch customer testimonials
+        $testimonials = Review::get();
+        $testimonials = json_decode(json_encode($testimonials));
+        //fetch gallery photos
+        $galleries = Gallery::get();
+        $galleries = json_decode(json_encode($galleries));
+        return view('frontpages.index')->with(compact('homes','sliders', 'services','galleries','testimonials'));
     }
     public function About(){
         $abouts = About::first();
@@ -60,7 +68,10 @@ class PagesController extends Controller
         return view('frontpages.faq')->with(compact('questions'));
     }
     public function Gallery(){
-        return view('frontpages.gallery');
+        //fetch gallery photos
+        $galleries = Gallery::get();
+        $galleries = json_decode(json_encode($galleries));
+        return view('frontpages.gallery')->with(compact('galleries'));
     }
     public function Treatment(){
         return view('frontpages.treatment-single');
@@ -70,6 +81,19 @@ class PagesController extends Controller
     }
     public function Blog(){
         return view('frontpages.blog-single');
+    }
+    public function Appointment(Request $request){
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+
+            $appointments = new Appointment;
+            $appointments->name = $data['name'];
+            $appointments->email = $data['email'];
+            $appointments->appointment = $data['appointment'];
+            $appointments->date = $data['date'];
+            $appointments->save();
+        }
+        return redirect('/');
     }
     public function Contact(Request $request){
         if ($request->isMethod('post')) {

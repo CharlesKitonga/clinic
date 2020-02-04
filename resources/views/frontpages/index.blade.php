@@ -12,7 +12,10 @@
                             <div class="slider-captions">
                                 <h1 class="slider-title">{{$slider->heading}}</h1>
                                 <p class="slider-text hidden-xs">{{$slider->description}} </p>
-                                <a href="#" class="btn btn-primary btn-sm hidden-sm hidden-xs">make an appointment</a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                                    Make an Appointment
+                                </button>
                                 <a href="#" class="btn btn-default btn-sm hidden-sm hidden-xs">meet the doctor</a>
                             </div>
                         </div>
@@ -20,6 +23,44 @@
                 </div>
             </div>
             @endforeach
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalTitle">Write to Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{url('/appointment')}}" method="post">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Your Name</label>
+                            <input type="text" name = "name" class="form-control" required=""  placeholder="Kindly Write Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email Address</label>
+                            <input type="email" name = "email" class="form-control" required=""  placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Reason for Appointment</label>
+                            <textarea class="form-control" name="appointment" required="" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Date</label>
+                            <input type="date" name="date" class="form-control" required=""  placeholder="Select a Date">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Book</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- slider-close -->
@@ -105,24 +146,19 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    @foreach($galleries as $gallery)
                     <div class="ba-gallery">
-                        <img src="{{asset('/images/gallery-img-1.jpg')}}" alt="" class="img-responsive">
+                        <img src="{{ asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
                         <div class="ba-left-btn"> <span class="left-btn">before</span></div>
                         <div class="ba-right-btn"><span class="right-btn">after</span></div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="ba-gallery">
-                        <img src="{{asset('/images/gallery-img-2.jpg')}}" alt="" class="img-responsive">
-                        <div class="ba-left-btn"> <span class="left-btn">before</span></div>
-                        <div class="ba-right-btn"><span class="right-btn">after</span></div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="mt40 text-center">
-                        <a href="#" class="btn btn-primary btn-lg">view smile gallery</a>
+                        <a href="{{url('/gallery')}}" class="btn btn-primary btn-lg">view smile gallery</a>
                     </div>
                 </div>
             </div>
@@ -143,48 +179,22 @@
             </div>
             <div class="testimonial-carousel">
                 <div class="owl-carousel slider">
+                    @foreach($testimonials as $testimony)
                     <div class="item">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
                             <div class="">
                                 <div class="testimonial-content">
-                                    <p class="testimonial-text">“Consectetur et interdum vulputate in act etios vestibulum ullamcorper sapien eget sodales feugiat etiam justm molestie viverra id a massa pellentesque non tellus urna.”</p>
+                                    <p class="testimonial-text">“{{$testimony->textarea}}”</p>
                                     <div class="">
-                                        <div class="testimonial-pic"> <img src="{{asset('/images/testi-pic-1.jpg')}}" alt="" class="img-circle"></div>
+                                    <div class="testimonial-pic"> <div class="img-circle" style = "color: #128512;">{{$testimony->emoji}}</div></div>
                                         <div class="testimonial-meta">
-                                            <span>-Jeniol Marcus</span> </div>
+                                            <span>{{$testimony->name}}s</span> </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                            <div class="">
-                                <div class="testimonial-content">
-                                    <p class="testimonial-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut nisi nec risus bibendum ullamcorper et eu orci. Vestibulum et pulvinar eu sem luctus fermentum diam.”</p>
-                                    <div class="">
-                                        <div class="testimonial-pic"><img src="{{asset('/images/testi-pic-2.jpg')}}" alt="" class="img-circle"></div>
-                                        <div class="testimonial-meta">
-                                            <span>-Ryder Lothian</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                            <div class="">
-                                <div class="testimonial-content">
-                                    <p class="testimonial-text">“ Vestibulum dictum ullamcorper leo, ac dictum purus aliquam ac. Cras fringilla tortor ut nulla mollis aliquet urna hendrerit. Sed vitae malesuada nisi at aliquam enim. ”</p>
-                                    <div class="">
-                                        <div class="testimonial-pic"><img src="{{asset('/images/testi-pic-3.jpg')}}" alt="" class="img-circle"></div>
-                                        <div class="testimonial-meta">
-                                            <span>-Brock Lambrick</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -199,7 +209,11 @@
                     <p>We offer a wide range of procedures to help you get the perfect smile.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="cta-btn"><a href="#" class="btn btn-primary btn-lg"> book an appointment</a></div>
+                    <div class="cta-btn"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                            Book an Appointment
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

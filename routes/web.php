@@ -24,6 +24,7 @@ Route::get('/', 'PagesController@Index');
 Route::get('/about-us', 'PagesController@About');
 Route::get('/services', 'PagesController@Services');
 Route::match(['get','post'],'/testimonials', 'PagesController@Testimonials');
+Route::match(['get','post'],'/appointment', 'PagesController@Appointment');
 Route::get('/faq', 'PagesController@Faq');
 Route::get('/gallery', 'PagesController@Gallery');
 Route::get('/treatment-single', 'PagesController@Treatment');

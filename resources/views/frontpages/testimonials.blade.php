@@ -29,11 +29,11 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
-                                    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                                    <input type="text" name = "name" required="" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Write Your experience</label>
-                                    <textarea class="form-control" name="textarea" id="myTextarea" style = "display:none;" rows="3"></textarea>
+                                    <textarea class="form-control" required=""  name="textarea" id="myTextarea" style = "display:none;" rows="3"></textarea>
                                     <script >
                                         $(document).ready(function(){
                                             $("#myTextarea").emojioneArea({
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Add an Emoji</label>
-                                    <input type="text" name = "emoji" class="form-control" id="emoji" placeholder="Add an Emoji">
+                                    <input type="text" required="" name = "emoji" class="form-control" id="emoji" placeholder="Add an Emoji">
                                     <script >
                                         $(document).ready(function(){
                                             $("#emoji").emojioneArea({
