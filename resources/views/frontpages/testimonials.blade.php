@@ -8,7 +8,58 @@
                     <div class="page-section">
                         <h1 class="page-title ">Testimonials</h1>
                         <p>Etiarem ipsum dolor sit ce eu lacus impsus erat vitae.</p>
-                        <a href="#" class="btn btn-primary">make an appointment</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Add a Review
+                        </button>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Add your Experience</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="/testimonials" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Name</label>
+                                    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Write Your experience</label>
+                                    <textarea class="form-control" name="textarea" id="myTextarea" style = "display:none;" rows="3"></textarea>
+                                    <script >
+                                        $(document).ready(function(){
+                                            $("#myTextarea").emojioneArea({
+                                                pickerPosition: "bottom"
+                                            });
+                                        })
+                                    </script>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Add an Emoji</label>
+                                    <input type="text" name = "emoji" class="form-control" id="emoji" placeholder="Add an Emoji">
+                                    <script >
+                                        $(document).ready(function(){
+                                            $("#emoji").emojioneArea({
+                                                pickerPosition: "bottom"
+                                            });
+                                        })
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,48 +70,21 @@
     <div class="space-medium">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="testimonial-content mb40">
-                        <p class="testimonial-text">“Consectetur et interdum vulputate in act etios vestibulum ullamcorper sapien eget sodales feugiat etiam justm molestie viverra id a massa pellentesque non tellus urna.”</p>
+                @foreach($review as $rev)
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="display:inline-block;">
+                    <div class="testimonial-content mb-40">
+                        <p class="testimonial-text">“{{$rev->textarea}}”</p>
                         <div class="">
-                            <div class="testimonial-pic"> <img src="images/testi-pic-1.jpg" alt="" class="img-circle"></div>
+                            <div class="testimonial-pic"> <div class="img-circle" style = "color: #128512;">{{$rev->emoji}}</div></div>
                             <div class="testimonial-meta">
-                                <span>-Jeniol Marcus</span> </div>
+                                <span>{{$rev->name}}</span> </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="testimonial-content mb40">
-                        <p class="testimonial-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit maximus mattisorbi erat turpisvehicula non rutrum idm etlobortis ma augue ut libero auctor consectetur.”</p>
-                        <div class="">
-                            <div class="testimonial-pic"> <img src="images/testi-pic-2.jpg" alt="" class="img-circle"></div>
-                            <div class="testimonial-meta">
-                                <span>-david fenolly</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">“Pellentesque nec commodo est, nec scelerisque libero. Mauris auctor ac augue nec venenatis. In posuere, magna nec malesuada maximus, justo orci maximus metus ut vehicula. ”</p>
-                        <div class="">
-                            <div class="testimonial-pic"> <img src="images/testi-pic-3.jpg" alt="" class="img-circle"></div>
-                            <div class="testimonial-meta">
-                                <span>-lina williams</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">“Nullam enim leo, ultrices vulputate orci at, elementum semper urna. Morbi lacinia accumsan urna eget faucibus lectus sollicitudin at. Suspendisse at enim vestibulum.”</p>
-                        <div class="">
-                            <div class="testimonial-pic"> <img src="images/testi-pic-4.jpg" alt="" class="img-circle"></div>
-                            <div class="testimonial-meta">
-                                <span>-steave genn</span> </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
     <!-- treatment close -->
+  >
 @endsection

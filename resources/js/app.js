@@ -58,6 +58,7 @@ let routes = [
     { path: '/admin-about', component: require('./components/About.vue').default },
     { path: '/admin-services', component: require('./components/Service.vue').default },
     { path: '/admin-faq', component: require('./components/Faq.vue').default },
+    { path: '/admin-team', component: require('./components/Team.vue').default },
     { path: '/admin-gallery', component: require('./components/Gallery.vue').default }
 
 

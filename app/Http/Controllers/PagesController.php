@@ -7,6 +7,10 @@ use App\Slider;
 use App\About;
 use App\Service;
 use App\Home;
+use App\Review;
+use App\Contact;
+use App\Team;
+use App\Topic;
 use Session;
 
 class PagesController extends Controller
@@ -26,7 +30,11 @@ class PagesController extends Controller
     public function About(){
         $abouts = About::first();
         $abouts = json_decode(json_encode($abouts));
-        return view('frontpages.about')->with(compact('abouts'));
+
+        //fetch team members
+        $teams = Team::get();
+        $teams = json_decode(json_encode($teams));
+        return view('frontpages.about')->with(compact('abouts', 'teams'));
     }
     public function Services(){
 
@@ -34,11 +42,22 @@ class PagesController extends Controller
         $services = json_decode(json_encode($services));
         return view('frontpages.services')->with(compact('services'));
     }
-    public function Testimonials(){
-        return view('frontpages.testimonials');
+    public function Testimonials(Request $request){
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            $reviews = new Review;
+            $reviews->name = $data['name'];
+            $reviews->textarea = $data['textarea'];
+            $reviews->emoji = $data['emoji'];
+            $reviews->save();
+        }
+        $review = Review::get();
+        return view('frontpages.testimonials')->with(compact('review'));
     }
     public function Faq(){
-        return view('frontpages.faq');
+        $questions = Topic::get();
+        $questions = json_decode(json_encode($questions));
+        return view('frontpages.faq')->with(compact('questions'));
     }
     public function Gallery(){
         return view('frontpages.gallery');
@@ -52,8 +71,20 @@ class PagesController extends Controller
     public function Blog(){
         return view('frontpages.blog-single');
     }
-    public function Contact(){
-        return view('frontpages.contact-us');
+    public function Contact(Request $request){
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            //echo("<pre>");print_r($data);die;
+
+            $contacts = new Contact;
+            $contacts->name = $data['name'];
+            $contacts->email = $data['email'];
+            $contacts->subject = $data['subject'];
+            $contacts->textarea = $data['textarea'];
+            $contacts->save();
+
+        }
+        return view('frontpages.contact-us')->with('success','Thank You for Your Message we will get in touch..');
     }
     public function logout() {
 		Session::flush();

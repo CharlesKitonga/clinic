@@ -4,7 +4,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Frequently Asked Questions</h3>
+                <h3 class="card-title">Staff Details</h3>
 
                 <div class="card-tools">
                     <button class="btn btn-success" @click="newModal">Add Info <i class="fas fa-plus-square fa-fw"></i></button>
@@ -15,23 +15,25 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                        <th>Dental Type</th>
+                        <th>Name</th>
+                        <th>Title</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="gallery in galleries.data" :key="gallery.id">
-                      <td>{{gallery.type}}</td>
-                        <td>
-                            <img class="img-fluid mb-3" :src="'./images/gallery/'+gallery.photo" style="width:70px;" alt=" Avatar">
+                    <tr v-for="team in teams.data" :key="team.id">
+                      <td>{{team.name}}</td>
+                      <td>{{team.title}}</td>
+                      <td>
+                        <img class="img-fluid mb-3" :src="'./images/teams/'+team.photo" style="width:70px;" alt=" Avatar">
                       </td>
                       <td>
-                          <a href="#" @click="editModal(gallery)">
+                          <a href="#" @click="editModal(team)">
                               <i class="fa fa-edit text-blue"></i>
                           </a>
                           /
-                           <a href="#" @click="deleteTopic(gallery.id)">
+                           <a href="#" @click="deleteHome(team.id)">
                               <i class="fa fa-trash text-red"></i>
                           </a>
                       </td>
@@ -52,24 +54,29 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" v-show="!editmode" id="homeModalLabel">Add Topic Details</h5>
-                        <h5 class="modal-title" v-show="editmode" id="homeModalLabel">Update Topic Info</h5>
+                        <h5 class="modal-title" v-show="!editmode" id="homeModalLabel">Add Home Details</h5>
+                        <h5 class="modal-title" v-show="editmode" id="homeModalLabel">Update Home Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form @submit.prevent = "editmode ? updateGallery() :createGallery()">
+                    <form @submit.prevent = "editmode ? updateTeam() :createeamT()">
                     <div class="modal-body">
                         <div class="form-group">
-                            <input v-model="form.type" type="text" name="type" placeholder="Picture Definition"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('type') }">
-                            <has-error :form="form" field="type"></has-error>
+                            <input v-model="form.name" type="text" name="name" placeholder="Staff name"
+                                class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
+                            <has-error :form="form" field="name"></has-error>
                         </div>
-                         <div class="form-group row">
-                            <label for="photo" class="col-sm-4 col-form-label">Gallery Pictures</label>
+                        <div class="form-group">
+                            <textarea v-model="form.title" type="text" name="title" placeholder="Short Info about the Member"
+                                class="form-control" :class="{ 'is-invalid': form.errors.has('title') }"></textarea>
+                            <has-error :form="form" field="title"></has-error>
+                        </div>
+                          <div class="form-group row">
+                            <label for="photo" class="col-sm-4 col-form-label">Homepage Photo</label>
                             <div class="col-sm-6">
                                 <input type="file" v-show="!editmode" accept="image/*" @change="uploadphoto" class="form-input"/>
-                                <input type="file" v-show="editmode" accept="image/*" @change="updateGalleryPic"  class="form-input"/>
+                                <input type="file" v-show="editmode" accept="image/*" @change="updateTeamPic"  class="form-input"/>
                             </div>
                         </div>
                     </div>
@@ -92,11 +99,12 @@
                 //check if it's an edit function and switch to the modal
                 editmode: false,
                 //fetch products from db using axios
-                galleries:{},
+                teams:{},
                 // create a new form instance
                 form: new Form({
                     id: '',
-                    type: '',
+                    name: '',
+                    title: '',
                     photo: ''
                 })
             }
@@ -106,10 +114,10 @@
             getResults(page = 1) {
                 axios.get('api/user?page=' + page)
                     .then(response => {
-                        this.galleries = response.data;
+                        this.teams = response.data;
                     });
             },
-            updateGalleryPic(e){
+            updateTeamPic(e){
                 //console.log('uploading');
                 //grab the file we are uploading
                 let file = e.target.files[0];
@@ -128,9 +136,10 @@
                 }
 
             },
-            updateGallery(){
+
+            updateTeam(){
                 this.$Progress.start();
-                this.form.put('api/galleries/'+this.form.id)
+                this.form.put('api/teams/'+this.form.id)
                 .then(()=>{
                     //if successfull
                     Swal.fire(
@@ -158,7 +167,7 @@
                 this.form.reset();
                 $('#homeModal').modal('show')
             },
-            deleteTopic(id){
+            deleteHome(id){
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -170,7 +179,7 @@
                 }).then((result) => {
                         //send request to the server
                         if (result.value) {
-                            this.form.delete('api/galleries/'+id).then(()=>{
+                            this.form.delete('api/teams/'+id).then(()=>{
                                     Swal.fire(
                                     'Deleted!',
                                     'Your file has been deleted.',
@@ -202,20 +211,20 @@
                 }
 
             },
-            loadGallery(){
-                axios.get("api/galleries").then(({ data }) => (this.galleries = data))
+            loadHomeDetails(){
+                axios.get("api/teams").then(({ data }) => (this.teams = data))
             },
-            createGallery(){
+            createeamT(){
                 // [Product.vue specific] When Product.vue is first loaded start the progress bar
                 this.$Progress.start();
-                this.form.post('api/galleries')
+                this.form.post('api/teams')
                 .then(()=>{
                     Fire.$emit('AfterCreate');
                     //  [Product.vue specific] When Product.vue is finish loading finish the progress bar
                     $('#homeModal').modal('hide')
                     Toast.fire({
                         icon: 'success',
-                        title: 'Gallery Details Added Successfully'
+                        title: 'Member Details Added Successfully'
                     })
                     this.$Progress.finish();
                 })
@@ -233,18 +242,18 @@
                 //use axios to query the db
                 axios.get('api/findUser?q='+ query)
                 .then((data)=>{
-                    this.galleries = data.data
+                    this.teams = data.data
                 })
                 .catch(()=>{
 
                 })
 
             });
-            this.loadGallery();
+            this.loadHomeDetails();
             /* this method sends http request every three seconds */
-            //setInterval(() => this.loadGallery(), 3000);
+            //setInterval(() => this.loadHomeDetails(), 3000);
             Fire.$on('AfterCreate', () =>{
-                this.loadGallery();
+                this.loadHomeDetails();
             });
         }
     }

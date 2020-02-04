@@ -23,13 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PagesController@Index');
 Route::get('/about-us', 'PagesController@About');
 Route::get('/services', 'PagesController@Services');
-Route::get('/testimonials', 'PagesController@Testimonials');
+Route::match(['get','post'],'/testimonials', 'PagesController@Testimonials');
 Route::get('/faq', 'PagesController@Faq');
 Route::get('/gallery', 'PagesController@Gallery');
 Route::get('/treatment-single', 'PagesController@Treatment');
 Route::get('/blog-default', 'PagesController@Blogs');
 Route::get('/blog-single', 'PagesController@Blog');
-Route::get('/contact-us', 'PagesController@Contact');
+Route::match(['get','post'], '/contact-us','PagesController@Contact');
 //admin logout route
 Route::get('/admin-logout', 'PagesController@logout');
 

@@ -23,6 +23,8 @@ Route::apiResources([
     'sliders' => 'API\SliderController',
     'services' => 'API\ServicesController',
     'abouts' => 'API\AboutController',
+    'teams' => 'API\TeamController',
+    'galleries' => 'API\GalleryController',
     'topics' => 'API\TopicController'
 
 ]);

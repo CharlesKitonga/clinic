@@ -100,8 +100,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
                     <li class="nav-item">
                         <router-link to="/admin-faq" class="nav-link ">
-                            <i class="fas fa-image nav-icon text-cyan"></i>
+                            <i class="fas fa-question-circle nav-icon text-cyan"></i>
                             <p>FAQ</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin-team" class="nav-link ">
+                            <i class="fas fa-user-friends nav-icon text-cyan"></i>
+                            <p>Add Team</p>
                         </router-link>
                     </li>
                     <li class="nav-item">

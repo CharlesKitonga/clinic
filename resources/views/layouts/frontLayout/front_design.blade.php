@@ -18,22 +18,26 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <!-- FontAwesome CSS -->
     <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/emojionearea.min.css" rel="stylesheet">
     <link href="css/owl.theme.default.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/emojionearea.min.js"></script>
+
 
 </head>
 
 <body>
         @include('layouts.frontLayout.header')
-
+        @include('flash-message')
         @yield('content')
 
         @include('layouts.frontLayout.footer')
 
     <!-- footer close -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/navigation.js" type="text/javascript"></script>

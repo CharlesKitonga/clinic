@@ -84,59 +84,26 @@
                     <div class="section-title">
                         <!-- section title start-->
                         <h1>Dental Team</h1>
-                        <p>Proin rutrum metus felis, quis tincidunt donec orci act risus semper vita simple dummy
-                            <br> mols vel nisl nec nunc sagittis laoreet.</p>
+                        <p> <strong> Meet Our Dedicated Team in Pearl White Dental Care</strong></p>
                     </div>
                     <!-- /.section title start-->
                 </div>
             </div>
             <div class="row">
-                <!-- member-1-start -->
+                <!-- member--start -->
+                @foreach($teams as $team )
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="team-block">
-                      <img src="images/team.png" alt="" class="img-circle">
+                      <img src="{{ asset('images/teams/'.$team->photo) }}" alt="" class="img-circle">
 
                         <div class="team-content mt20">
-                            <h3 class="team-title">Hemen vikins</h3>
-                            <span class="team-meta">Dentist</span>
+                            <h3 class="team-title">{{$team->name}}</h3>
+                            <span class="team-meta">{{$team->title}}</span>
                         </div>
                     </div>
                 </div>
-                <!-- member-1-close -->
-                <!-- member-2-start -->
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <div class="team-block">
-                         <img src="images/team.png" alt="" class="img-circle">
-
-                        <div class="team-content mt20">
-                            <h3 class="team-title">Zoricca Benz</h3>
-                            <span class="team-meta">Dentist</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- member-2-close -->
-                <!-- member-3-start -->
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <div class="team-block">
-                         <img src="images/team.png" alt="" class="img-circle">
-
-                        <div class="team-content mt20">
-                            <h3 class="team-title">Mereon dolpher</h3>
-                            <span class="team-meta">Dentist</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- member-3-close -->
-                <!-- member-4-start -->
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <div class="team-block">
-                       <img src="images/team.png" alt="" class="img-circle">
-
-                        <div class="team-content mt20">
-                            <h3 class="team-title">Steave balley</h3>
-                            <span class="team-meta">Dentist</span> </div>
-                    </div>
-                </div>
+                <!-- member--close -->
+                @endforeach
             </div>
         </div>
     </div>

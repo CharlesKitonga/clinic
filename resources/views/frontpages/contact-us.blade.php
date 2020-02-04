@@ -33,40 +33,47 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>{{ $message }}</strong>
+                            </div>
+                        @endif
                     <div class="mb30">
                         <h1>Get In Touch</h1>
                         <p>Submit your contact details and we’ll be in touch shortly. </p>
                         <div class="row">
-                            <form>
+                            <form method = "POST" action ="{{url('/contact-us')}}">
+                            @csrf
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label sr-only " for="name"></label>
-                                        <input id="name" type="text" placeholder="Name" class="form-control">
+                                        <input id="name" type="text" name ="name" placeholder="Name" class="form-control" required = "">
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label sr-only " for="email"></label>
-                                        <input id="email" type="text" placeholder="Email" class="form-control">
+                                        <input id="email" type="text" name ="email" placeholder="Email" class="form-control" required = "">
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label sr-only " for="subject"></label>
-                                        <input id="subject" type="text" placeholder="Subject" class="form-control">
+                                        <input id="subject" type="text" name ="subject" placeholder="Subject" class="form-control" required = "">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label sr-only" for="textarea"></label>
-                                        <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder="Messages"></textarea>
+                                        <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder="Messages"required = ""></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <button class="btn btn-primary">send us message</button>
                                 </div>
+                            </div>
                         </div>
-                    </div>
                     </form>
                 </div>
             </div>
