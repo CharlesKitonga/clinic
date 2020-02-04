@@ -34,7 +34,7 @@
                     <a href="/">
                         <font face="Brush Script MT">
                             <a href="/" style="font-size: 30px; color:#000066; ">Pearl White Dental Care</a><br>
-                            <a href="/" style="font-size: 18px; color:#FF8029; ">...for a Healthy Smile to Every Face.</a>
+                            <a href="/" style="font-size: 18px; color:#fff; ">...for a Healthy Smile to Every Face.</a>
                         </font>
                     </a>
                 </div>

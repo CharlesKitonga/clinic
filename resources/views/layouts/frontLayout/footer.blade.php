@@ -7,7 +7,7 @@
                     <div class="footer-widget">
                         <div class="mb30"><img src="./images/logo.png" alt="" class="img-responsive"></div>
                         <p>State of the art modern dental clinic, offering excellent services Pearl White Dental Care, Temple Rd, Kericho Dental Clinic </p>
-                        <a href="#" class="btn btn-default btn-sm">meet our team</a>
+                        <a href="{{url('/about-us')}}" class="btn btn-default btn-sm">meet our team</a>
                     </div>
                 </div>
                 <!-- footer-contactinfo-close -->
@@ -16,11 +16,11 @@
                     <div class="footer-widget">
                         <h3 class="footer-title">Quick Links</h3>
                         <ul>
-                            <li><a href="#">About us </a></li>
-                            <li><a href="#">Treatments </a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Testimonials </a></li>
-                            <li> <a href="#">FAQ</a></li>
+                            <li><a href="{{url('/about-us')}}">About us </a></li>
+                            <li><a href="{{url('/services')}}">Treatments </a></li>
+                            <li><a href="{{url('/blog-default')}}">Blog</a></li>
+                            <li><a href="{{url('/testimonials')}}">Testimonials </a></li>
+                            <li> <a href="{{url('/faq')}}">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
