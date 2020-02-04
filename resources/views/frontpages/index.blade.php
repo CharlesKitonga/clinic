@@ -188,7 +188,7 @@
                                     <div class="">
                                     <div class="testimonial-pic"> <div class="img-circle" style = "color: #128512;">{{$testimony->emoji}}</div></div>
                                         <div class="testimonial-meta">
-                                            <span>{{$testimony->name}}s</span> </div>
+                                            <span>{{$testimony->name}}</span> </div>
                                     </div>
                                 </div>
                             </div>
