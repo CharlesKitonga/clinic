@@ -16,7 +16,7 @@
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
                                     Make an Appointment
                                 </button>
-                                <a href="{{url('/doctor')}}" class="btn btn-default btn-sm hidden-sm hidden-xs">meet the doctor</a>
+                                <a href="{{url('/leader')}}" class="btn btn-default btn-sm hidden-sm hidden-xs">meet the doctor</a>
                             </div>
                         </div>
                     </div>
