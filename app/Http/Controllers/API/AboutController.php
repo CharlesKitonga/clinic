@@ -30,8 +30,7 @@ class AboutController extends Controller
     {
         $this->validate($request, [
             'heading' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
-            'body' => 'required|string|max:191',
+            'description' => 'required|string|max:1000',
             'photo' => 'required|string|min:191',
         ]);
 
@@ -85,8 +84,7 @@ class AboutController extends Controller
         //validate product information
         $this->validate($request, [
             'heading' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
-            'body' => 'required|string|max:191',
+            'description' => 'required|string|max:1000',
         ]);
         //check for current photo
         $currentPhoto = $abouts->photo;

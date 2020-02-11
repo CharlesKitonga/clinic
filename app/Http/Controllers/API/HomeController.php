@@ -31,8 +31,7 @@ class HomeController extends Controller
     {
         $this->validate($request, [
             'heading' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
-            'points' => 'required|string|max:191',
+            'description' => 'required|string',
             'photo' => 'required|string|min:191',
         ]);
 
@@ -87,8 +86,7 @@ class HomeController extends Controller
         //validate product information
         $this->validate($request, [
             'heading' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
-            'points' => 'required|string|max:191',
+            'description' => 'required|string',
         ]);
         //check for current photo
         $currentPhoto = $homes->photo;

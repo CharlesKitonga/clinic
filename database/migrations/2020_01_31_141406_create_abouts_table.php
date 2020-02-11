@@ -17,7 +17,6 @@ class CreateAboutsTable extends Migration
             $table->bigIncrements('id');
             $table->string('heading');
             $table->string('description');
-            $table->string('body');
             $table->string('photo');
             $table->timestamps();
         });

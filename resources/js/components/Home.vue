@@ -17,7 +17,6 @@
                     <tr>
                         <th>Heading</th>
                         <th>Description</th>
-                        <th>Highlight Points</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -25,8 +24,7 @@
                   <tbody>
                     <tr v-for="home in homes.data" :key="home.id">
                       <td>{{home.heading}}</td>
-                      <td>{{home.description}}</td>
-                      <td>{{home.points}}</td>
+                      <td v-html="home.description"></td>
                       <td>
                         <img class="img-fluid mb-3" :src="'./images/homes/'+home.photo" style="width:70px;" alt=" Avatar">
                       </td>
@@ -34,7 +32,7 @@
                           <a href="#" @click="editModal(home)">
                               <i class="fa fa-edit text-blue"></i>
                           </a>
-                          /
+
                            <a href="#" @click="deleteHome(home.id)">
                               <i class="fa fa-trash text-red"></i>
                           </a>
@@ -53,7 +51,7 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="homeModal" tabindex="-1" role="dialog" aria-labelledby="homeModalMLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" v-show="!editmode" id="homeModalLabel">Add Home Details</h5>
@@ -70,14 +68,7 @@
                             <has-error :form="form" field="heading"></has-error>
                         </div>
                         <div class="form-group">
-                            <textarea v-model="form.description" type="text" name="description" placeholder="Short Info about the Clinic"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('description') }"></textarea>
-                            <has-error :form="form" field="description"></has-error>
-                        </div>
-                        <div class="form-group">
-                            <textarea v-model="form.points" type="text" name="points" placeholder="points"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('points') }"></textarea>
-                            <has-error :form="form" field="points"></has-error>
+                            <vue-editor v-model="form.description"></vue-editor>
                         </div>
                           <div class="form-group row">
                             <label for="photo" class="col-sm-4 col-form-label">Homepage Photo</label>
@@ -100,7 +91,13 @@
 </template>
 
 <script>
+// Basic Use - Covers most scenarios
+import { VueEditor } from "vue2-editor";
     export default {
+        name: "Home",
+        components: {
+            VueEditor
+        },
         data(){
             return{
                 //check if it's an edit function and switch to the modal

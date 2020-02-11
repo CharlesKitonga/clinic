@@ -29,7 +29,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="about-section">
                         <h1>{{$leader->heading}}</h1>
-                        <p>{{$leader->description}}.</p>
+                        <p>{!! html_entity_decode(nl2br(e($leader->description))) !!}</p>
                         <a href="{{url('about-us')}}" class="btn btn-primary btn-sm">know about us</a>
                     </div>
                 </div>

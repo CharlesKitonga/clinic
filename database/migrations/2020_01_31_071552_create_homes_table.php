@@ -17,7 +17,6 @@ class CreateHomesTable extends Migration
             $table->bigIncrements('id');
             $table->string('heading');
             $table->string('description');
-            $table->string('points');
             $table->string('photo');
             $table->timestamps();
         });

@@ -17,7 +17,6 @@
                     <tr>
                         <th>Heading</th>
                         <th>Description</th>
-                        <th>Body</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -25,8 +24,7 @@
                   <tbody>
                     <tr v-for="about in abouts.data" :key="about.id">
                       <td>{{about.heading}}</td>
-                      <td>{{about.description}}</td>
-                      <td>{{about.body}}</td>
+                      <td v-html="about.description"></td>
                       <td>
                         <img class="img-fluid mb-3" :src="'./images/homes/'+about.photo" style="width:70px;" alt=" Avatar">
                       </td>
@@ -53,7 +51,7 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalMLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog  modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" v-show="!editmode" id="aboutModalLabel">Add Home Details</h5>
@@ -70,14 +68,7 @@
                             <has-error :form="form" field="heading"></has-error>
                         </div>
                         <div class="form-group">
-                            <textarea v-model="form.description" type="text" name="description" placeholder="Short Info about the Clinic"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('description') }"></textarea>
-                            <has-error :form="form" field="description"></has-error>
-                        </div>
-                        <div class="form-group">
-                            <input v-model="form.body" type="text" name="body" placeholder="Add some points..."
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('body') }">
-                            <has-error :form="form" field="body"></has-error>
+                            <vue-editor v-model="form.description"></vue-editor>
                         </div>
                           <div class="form-group row">
                             <label for="photo" class="col-sm-4 col-form-label">Homepage Photo</label>
@@ -100,6 +91,8 @@
 </template>
 
 <script>
+// Basic Use - Covers most scenarios
+import { VueEditor } from "vue2-editor";
     export default {
         data(){
             return{

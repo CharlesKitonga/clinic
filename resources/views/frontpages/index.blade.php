@@ -36,12 +36,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="about-section">
                         <h1>{{$homes->heading}}</h1>
-                        <p>{{$homes->description}}.</p>
-                        <div class="about-list">
-                            <ul class=" angle angle-right mb30">
-                                <li>{{$homes->points}}</li>
-                            </ul>
-                        </div>
+                        <p >{!! html_entity_decode(nl2br(e($homes->description))) !!}</p>
                         <a href="{{url('about-us')}}" class="btn btn-primary btn-sm">know about us</a>
                     </div>
                 </div>

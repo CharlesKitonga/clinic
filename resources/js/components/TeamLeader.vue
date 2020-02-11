@@ -26,7 +26,7 @@
                     <tr v-for="team in teamleader.data" :key="team.id">
                       <td>{{team.name}}</td>
                       <td>{{team.title}}</td>
-                      <td>{{team.description}}</td>
+                      <td v-html="team.description"></td>
                       <td>
                         <img class="img-fluid mb-3" :src="'./images/teams/'+team.photo" style="width:70px;" alt=" Avatar">
                       </td>
@@ -75,9 +75,7 @@
                             <has-error :form="form" field="title"></has-error>
                         </div>
                         <div class="form-group">
-                            <textarea v-model="form.description" type="text" name="description" placeholder="Short Info about the team leader"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('description') }"></textarea>
-                            <has-error :form="form" field="description"></has-error>
+                            <vue-editor v-model="form.description"></vue-editor>
                         </div>
                           <div class="form-group row">
                             <label for="photo" class="col-sm-4 col-form-label">Homepage Photo</label>
@@ -100,6 +98,8 @@
 </template>
 
 <script>
+// Basic Use - Covers most scenarios
+import { VueEditor } from "vue2-editor";
     export default {
         data(){
             return{
