@@ -16,51 +16,13 @@
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
                                     Make an Appointment
                                 </button>
-                                <a href="#" class="btn btn-default btn-sm hidden-sm hidden-xs">meet the doctor</a>
+                                <a href="{{url('/doctor')}}" class="btn btn-default btn-sm hidden-sm hidden-xs">meet the doctor</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="appointmentModalTitle">Write to Us</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="{{url('/appointment')}}" method="post">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Your Name</label>
-                            <input type="text" name = "name" class="form-control" required=""  placeholder="Kindly Write Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email Address</label>
-                            <input type="email" name = "email" class="form-control" required=""  placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Reason for Appointment</label>
-                            <textarea class="form-control" name="appointment" required="" rows="5"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Date</label>
-                            <input type="date" name="date" class="form-control" required=""  placeholder="Select a Date">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Book</button>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
     <!-- slider-close -->
@@ -128,7 +90,7 @@
                         </div>
                     </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -151,15 +113,15 @@
                 </div>
             </div>
             <div class="row">
+            @foreach($galleries as $gallery)
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    @foreach($galleries as $gallery)
                     <div class="ba-gallery">
                         <img src="{{ asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
                         <div class="ba-left-btn"> <span class="left-btn">before</span></div>
                         <div class="ba-right-btn"><span class="right-btn">after</span></div>
                     </div>
-                    @endforeach
                 </div>
+            @endforeach
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -206,19 +168,6 @@
         </div>
     </div>
     <!-- testimonials-close  -->
-
-      <!-- =========================
-    insurance
-============================== -->
-    
-    
-    
-  
-<!-- =========================
-    END insurance
-============================== -->
-
-
     <!-- cta start -->
     <div class="cta-section">
         <div class="container">
@@ -238,6 +187,40 @@
         </div>
     </div>
     <!-- cta close -->
+    <!-- testimonials-start -->
+    <div class="space-medium bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-title">
+                        <!-- section title start-->
+                        <h1>Meet Our Partners</h1>
+                    </div>
+                    <!-- /.section title start-->
+                </div>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="owl-carousel slider">
+                    @foreach($partners as $partner)
+                    <div class="item">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-8  col-xs-8">
+                            <div class="testimonial-content">
+                                <div class="">
+                                <div class="testimonial-pic">
+                                    <div class="img-circle" style = "color: #128512;">
+                                        <img src="{{ asset('images/partners/'.$partner->photo) }}" alt="" class="img-responsive">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonials-close  -->
 @endsection
 
 

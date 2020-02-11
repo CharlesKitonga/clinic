@@ -8,10 +8,12 @@ use App\About;
 use App\Service;
 use App\Home;
 use App\Review;
+use App\Partner;
 use App\Gallery;
 use App\Appointment;
 use App\Contact;
 use App\Team;
+use App\TeamLeader;
 use App\Topic;
 use Session;
 
@@ -33,7 +35,14 @@ class PagesController extends Controller
         //fetch gallery photos
         $galleries = Gallery::get();
         $galleries = json_decode(json_encode($galleries));
-        return view('frontpages.index')->with(compact('homes','sliders', 'services','galleries','testimonials'));
+        //fetch partner info
+        $partners = Partner::get();
+        $partners = json_decode(json_encode($partners));
+        return view('frontpages.index')->with(compact('homes','sliders', 'services','galleries','testimonials','partners'));
+    }
+    public function Leader(){
+        $leader = TeamLeader::first();
+        return view('frontpages/leader')->with(compact('leader'));
     }
     public function About(){
         $abouts = About::first();
@@ -82,6 +91,7 @@ class PagesController extends Controller
     public function Blog(){
         return view('frontpages.blog-single');
     }
+
     public function Appointment(Request $request){
         if ($request->isMethod('post')) {
             $data = $request->all();

@@ -8,14 +8,18 @@
                     <div class="page-section">
                         <h1 class="page-title ">About Us</h1>
                         <p><font face="Times new roman">
-                            <a href="index.php" style="font-size: 18px; color:#000; ">State of the art modern dental clinic offering excellent services.</a>
+                            <a href="{{url('/')}}" style="font-size: 18px; color:#000; ">State of the art modern dental clinic offering excellent services.</a>
                         </font></p>
-                        <a href="#" class="btn btn-primary">make an appointment</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                            Make an Appointment
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- page-header-close -->
     <!-- treatment start -->
     <div class="space-medium">

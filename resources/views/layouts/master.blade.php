@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-cog text-green"></i>
                 <p>
-                    Management
+                    Manage Company Info
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
@@ -111,6 +111,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </router-link>
                     </li>
                     <li class="nav-item">
+                        <router-link to="/admin-teamleader" class="nav-link ">
+                            <i class="fas fa-user-friends nav-icon text-cyan"></i>
+                            <p>Team Leader Details</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
                         <router-link to="/admin-gallery" class="nav-link ">
                             <i class="fas fa-image nav-icon text-cyan"></i>
                             <p>Gallery</p>
@@ -128,12 +134,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-cog text-green"></i>
                 <p>
-                    Home Page Details
+                    Company Details
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
-                <li class="nav-item">
+                    <li class="nav-item">
                         <router-link to="/clinic-home" class="nav-link ">
                             <i class="fas fa-home nav-icon text-cyan"></i>
                             <p>Add Homepage Info</p>
@@ -143,6 +149,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <router-link to="/sliders" class="nav-link ">
                             <i class="fas fa-address-card nav-icon text-cyan"></i>
                             <p>Add Slider Info</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin-partners" class="nav-link ">
+                            <i class="fas fa-hands-helping nav-icon text-cyan"></i>
+                            <p>Partners</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin-clients" class="nav-link ">
+                            <i class="fas fa-notes-medical nav-icon text-cyan"></i>
+                            <p>Clients</p>
                         </router-link>
                     </li>
                 </ul>

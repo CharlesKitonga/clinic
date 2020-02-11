@@ -26,6 +26,7 @@ Route::get('/services', 'PagesController@Services');
 Route::match(['get','post'],'/testimonials', 'PagesController@Testimonials');
 Route::match(['get','post'],'/appointment', 'PagesController@Appointment');
 Route::get('/faq', 'PagesController@Faq');
+Route::get('/leader', 'PagesController@Leader');
 Route::get('/gallery', 'PagesController@Gallery');
 Route::get('/treatment-single', 'PagesController@Treatment');
 Route::get('/blog-default', 'PagesController@Blogs');

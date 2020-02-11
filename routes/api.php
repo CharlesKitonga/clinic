@@ -24,7 +24,10 @@ Route::apiResources([
     'services' => 'API\ServicesController',
     'abouts' => 'API\AboutController',
     'teams' => 'API\TeamController',
+    'teamleader' => 'API\TeamLeaderController',
     'galleries' => 'API\GalleryController',
+    'partners' => 'API\PartnerController',
+    'clients' => 'API\ClientsController',
     'topics' => 'API\TopicController'
 
 ]);

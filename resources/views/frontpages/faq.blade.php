@@ -8,7 +8,10 @@
                     <div class="page-section">
                         <h1 class="page-title ">FAQ</h1>
                         <p>State of the art modern dental clinic offering excellent services.</p>
-                        <a href="#" class="btn btn-primary">make an appointment</a>
+                         <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                            Make an Appointment
+                        </button>
                     </div>
                 </div>
             </div>
