@@ -7,7 +7,7 @@
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="page-section">
                         <h1 class="page-title ">Treatments</h1>
-                        <p>Etiarem ipsum dolor sit ce eu lacus impsus erat vitae.</p>
+                        <p>State of the art modern dental clinic offering excellent services.</p>
                         <a href="#" class="btn btn-primary">make an appointment</a>
                     </div>
                 </div>
@@ -23,8 +23,8 @@
                     <div class="section-title">
                         <!-- section title start-->
                         <h1>Welcome to Pearl White Dental Care</h1>
-                        <p>Proin rutrum metus felis quis tincidunt donec orci act risus semper vita simple dummy
-                            <br> mols vel nisl nec nunc sagittis laoreet.</p>
+                        <p>Pearl White Dental Care is a State of the art modern dental clinic, offering excellent dental services to all.
+                            <br> These are the main dental services being offered at Pearl White Dental Care.</p>
                     </div>
                     <!-- /.section title start-->
                 </div>

@@ -6,8 +6,8 @@
                     <div class="section-title">
                         <!-- section title start-->
                         <h1>Welcome to Pearl White Dental Care</h1>
-                        <p>Proin rutrum metus felis quis tincidunt donec orci act risus semper vita simple dummy
-                            <br> mols vel nisl nec nunc sagittis laoreet.</p>
+                        <p>Pearl White Dental Care is a State of the art modern dental clinic, offering excellent dental services to all.
+                            <br> These are the main dental services being offered at Pearl White Dental Care</p>
                     </div>
                     <!-- /.section title start-->
                 </div>

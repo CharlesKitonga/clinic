@@ -92,43 +92,49 @@
     @include('layouts.frontLayout.services')
     <!-- treatment close -->
     <!-- features-start -->
+    <section class="info-area style-two">
     <div class="about-bg-block ">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="feature-block">
-                        <h1 class="feature-title mb60">Why Choose Dental Care</h1>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="feature-content">
-                                    <h3 class="feature-title">24/7 Customer Support</h3>
-                                    <p class="feature-text">Proin rutrum metus felis sam act tincidunt risus sempers.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="feature-content">
-                                    <h3 class="feature-title">Affordable Dental Care</h3>
-                                    <p class="feature-text">Curabitur hendrerit fringilla enim aliqua fringilla suscipit.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="feature-content">
-                                    <h3 class="feature-title">Talented Doctors Team</h3>
-                                    <p class="feature-text">Proin rutrum metus felis sam act tincidunt risus sempers.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="feature-content">
-                                    <h3 class="feature-title">High Quality Equipment</h3>
-                                    <p class="feature-text">Hendrerit fringilla enim accumsan turpis aliquam orci.</p>
-                                </div>
-                            </div>
+             <div class="row">
+            <div class="col-lg-6 col-sm-12 col-xs-12">
+                <div class="right-side">
+                    <div class="img-holder">
+                        <img src="images/1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-xs-12 full-side">
+                <div class="left-side-two">
+                    <div class="full-content">
+                        <div class="section-title">
+                        <h2>Why Choose Pearl White Dental Care</h2>
+                        <p>Lorem ipsum dolor sit ametas  consectetur adipisicing elita sed do eiusmod tempor incididunt <br> dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation aliqua enim ad minim <br> veniam quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <ul>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Affordable Dental Care</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To listen to your concerns in a relaxed atmosphere at our dental practice and give you easily understandable explanation.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Offer a fair and transparent rates. No hidden extras! </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Maintain a Great reputation. </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <ul class="left-side">
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To observe the latest cross infection prevention guidelines; Your safety is  our primary concern.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To equip and maintain a State-of-the-art facility</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To keep you informed on the latest technological advancements as regard dental treatment and oral health in general.</li>
+                            </ul>
                         </div>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
+    </div>
+</section>
     <!-- features-close -->
     <!-- before after gallery-start -->
     <div class="space-medium">
@@ -138,8 +144,8 @@
                     <div class="section-title">
                         <!-- section title start-->
                         <h1>Before/After Gallery</h1>
-                        <p>Proin rutrum metus felis, quis tincidunt donec orci act risus semper vita simple dummy
-                            <br> mols vel nisl nec nunc sagittis laoreet.</p>
+                        <p>Pearl White Dental Care is a State of the art modern dental clinic, offering excellent dental services to all.
+                            <br> Below are before and after dental pictures at Pearl White Dental Care.</p>
                     </div>
                     <!-- /.section title start-->
                 </div>
@@ -200,6 +206,19 @@
         </div>
     </div>
     <!-- testimonials-close  -->
+
+      <!-- =========================
+    insurance
+============================== -->
+    
+    
+    
+  
+<!-- =========================
+    END insurance
+============================== -->
+
+
     <!-- cta start -->
     <div class="cta-section">
         <div class="container">

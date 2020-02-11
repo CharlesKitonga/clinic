@@ -8,7 +8,7 @@
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="page-section">
                         <h1 class="page-title ">Contact</h1>
-                        <p>Etiarem ipsum dolor sit ce eu lacus impsus erat vitae.</p>
+                        <p>State of the art modern dental clinic offering excellent services.</p>
                         <a href="#" class="btn btn-primary">make an appointment</a>
                     </div>
                 </div>

@@ -7,7 +7,9 @@
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="page-section">
                         <h1 class="page-title ">About Us</h1>
-                        <p>Etiarem ipsum dolor sit ce eu lacus impsus erat vitae.</p>
+                        <p><font face="Times new roman">
+                            <a href="index.php" style="font-size: 18px; color:#000; ">State of the art modern dental clinic offering excellent services.</a>
+                        </font></p>
                         <a href="#" class="btn btn-primary">make an appointment</a>
                     </div>
                 </div>
@@ -43,30 +45,30 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="feature-block">
-                        <h1 class="feature-title mb60">Why Choose Pearl White Dental Care</h1>
+                        <h1 class="feature-title mb60">Why Choose Dental Care</h1>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="feature-content">
                                     <h3 class="feature-title">24/7 Customer Support</h3>
-                                    <p class="feature-text">Proin rutrum metus felis sam act tincidunt risus sempers.</p>
+                                    <p class="feature-text">Pearl White Dental Care is a State of the art modern dental clinic, offering excellent services </p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="feature-content">
                                     <h3 class="feature-title">Affordable Dental Care</h3>
-                                    <p class="feature-text">Curabitur hendrerit fringilla enim aliqua fringilla suscipit.</p>
+                                    <p class="feature-text">Pearl White Dental Care is a State of the art modern dental clinic, offering excellent services.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="feature-content">
                                     <h3 class="feature-title">Talented Doctors Team</h3>
-                                    <p class="feature-text">Proin rutrum metus felis sam act tincidunt risus sempers.</p>
+                                    <p class="feature-text">Pearl White Dental Care is a State of the art modern dental clinic, offering excellent services</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="feature-content">
                                     <h3 class="feature-title">High Quality Equipment</h3>
-                                    <p class="feature-text">Hendrerit fringilla enim accumsan turpis aliquam orci.</p>
+                                    <p class="feature-text">Pearl White Dental Care is a State of the art modern dental clinic, offering excellent services</p>
                                 </div>
                             </div>
                         </div>
