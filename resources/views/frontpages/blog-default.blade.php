@@ -25,7 +25,7 @@
                                 <!-- post holder -->
                                 <div class="post-img">
                                     <!-- post img -->
-                                    <a href="#" class="imghover"><img src="images/post-img-1.jpg" alt="" class="img-responsive"></a>
+                                    <a href="{{url('blog-single')}}" class="imghover"><img src="images/post-img-1.jpg" alt="" class="img-responsive"></a>
                                     <div class="post-sticky"></div>
                                 </div>
                                 <!-- /.post img -->
@@ -33,12 +33,12 @@
                                     <!-- post content -->
                                     <div class="post-header">
                                         <!-- post header -->
-                                        <h1 class="post-title"><a href="blog-single.html" class="title">10 amazing uses for your old toothbrush</a></h1>
+                                        <h1 class="post-title"><a href="{{url('blog-single')}}" class="title">10 amazing uses for your old toothbrush</a></h1>
                                         <div class="meta"> <span class="meta-date"> 25 june, 2020</span> <span class="meta-comments">(22) Comments</span> </div>
                                     </div>
                                     <!-- /.post header -->
                                     <p>Nunc cursus leo risus non ac efficitur vel sed Mauris iaculis finibus ex et viverra. Aliquam blandit ornare justo, in sagittis sem ornare sit amet. Cras posuere vel ex at vulputate. Praesent volutpat consequat urt sagitton dimentum ditpat vivamus auctor magna eu vel</p>
-                                    <a href="#" class="btn btn-primary">Read More</a> </div>
+                                    <a href="{{('blog-single')}}" class="btn btn-primary">Read More</a> </div>
                                 <!-- /.post content -->
                             </div>
                             <!-- /.post holder -->
@@ -151,18 +151,6 @@
                         </ul>
                     </div>
                     <!-- widget-categories-close -->
-                    <!-- widget-archievs-start -->
-                    <div class=" widget widget-archives">
-                        <h2 class="widget-title">Archives</h2>
-                        <ul class="angle angle-right">
-                            <li> <a href="#">March (2018)</a></li>
-                            <li> <a href="#">February (2018)</a></li>
-                            <li><a href="#">January (2018)</a></li>
-                            <li><a href="#">December (2017)</a></li>
-                            <li> <a href="#">November (2017)</a></li>
-                        </ul>
-                    </div>
-                    <!-- widget-archievs-close -->
                     <!-- widget-recent-post-start -->
                     <div class=" widget widget-recent-post">
                         <h2 class="widget-title">Recent Post</h2>

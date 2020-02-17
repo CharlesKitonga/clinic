@@ -7,13 +7,13 @@
 
 Template Name:     Dentistry a Dental Clinic Website Template
 Version:           1.0.0
-Created Date:      10/07/2017 
-Created by :       https://easetemplate.com/ 
+Created Date:      10/07/2017
+Created by :       https://easetemplate.com/
 
 ------------------------------------------------------------------
 [CSS Table of contents]
 
-1.  Body / Typography 
+1.  Body / Typography
 2.  Form Elements
 3.  Buttons
 4.  General / Elements
@@ -60,7 +60,7 @@ Created by :       https://easetemplate.com/
 
 
 /*-----------------------------------
-    1. Body / Typography 
+    1. Body / Typography
 -----------------------------------*/
 
 body {
@@ -203,7 +203,7 @@ hr {
 }
 
 
-/*----------------------- 
+/*-----------------------
     2 Form Elements:
 -------------------------*/
 
@@ -223,7 +223,7 @@ label {}
 .required {}
 
 .form-group {
-    margin-bottom: : 5px;
+    margin-bottom: 5px;
 }
 
 .form-control {
@@ -366,7 +366,7 @@ a img.aligncenter {
 
 
 /*-----------------------------------
-    3. Buttons 
+    3. Buttons
 -----------------------------------*/
 
 .btn {
@@ -385,7 +385,7 @@ a img.aligncenter {
 }
 
 .btn-primary {
-    background-color: #ff8029;--f47e5e
+    background-color: #ff8029;
     color: #fff;
 }
 
@@ -455,11 +455,11 @@ button.btn {
 
 
 /*-----------------------------------
-    4. General / Elements 
+    4. General / Elements
 -----------------------------------*/
 
 
-/*----------------------- 
+/*-----------------------
     4.1 Section space :
 -------------------------*/
 
@@ -742,7 +742,7 @@ button.btn {
 
 
 /*--------------------------------
-4.4 Background & Block color 
+4.4 Background & Block color
 ----------------------------------*/
 
 .bg-light {
@@ -755,7 +755,7 @@ button.btn {
 }
 
 .bg-default {
-    
+
 }
 
 .bg-white {
@@ -803,7 +803,7 @@ button.btn {
 
 
 /*--------------------------------
-4.5 Features Block 
+4.5 Features Block
 ----------------------------------*/
 
 .about-bg-block {
@@ -860,7 +860,7 @@ button.btn {
 
 
 /*--------------------------------
-4.7 Call to actions 
+4.7 Call to actions
 ----------------------------------*/
 
 .cta-section {
@@ -914,7 +914,7 @@ button.btn {
 
 
 /*--------------------------------
- 4.8 Image Hover Effect 
+ 4.8 Image Hover Effect
 ----------------------------------*/
 
 img {
@@ -976,7 +976,7 @@ img {
 
 
 /*--------------------------------
-4.9 Icon 
+4.9 Icon
 ----------------------------------*/
 
 .icon {}
@@ -1022,12 +1022,12 @@ img {
 
 
 /*--------------------------------
-5 Header / Navigations 
+5 Header / Navigations
 ----------------------------------*/
 
 
 /*--------------------
-    5.1 Header Regular 
+    5.1 Header Regular
    ----------------------*/
 
 .logo {}
@@ -1516,7 +1516,7 @@ img {
 }
 
 #navigation.small-screen .submenu-button.submenu-opened:after {
-    background: ;
+    background: #fff;
 }
 
 #navigation.small-screen .submenu-button:before {
@@ -1580,7 +1580,7 @@ img {
 
 
 /*-----------------------------------
-    6. Slider 
+    6. Slider
 -------------------------------------*/
 
 .slider {
@@ -1624,7 +1624,7 @@ img {
 }
 
 .slider .owl-nav {
-   
+
     text-align: center;
     -webkit-tap-highlight-color: transparent;
 }
@@ -1740,7 +1740,7 @@ img {
 
 
 /*-----------------------------------
-8. Footer 
+8. Footer
 -------------------------------------*/
 
 .footer {
@@ -1856,7 +1856,7 @@ img {
 
 
 /*-----------------------------------
-9. Pages 
+9. Pages
 -------------------------------------*/
 
 
@@ -2067,7 +2067,7 @@ a:active {
 }
 
 .testimonial-carousel .owl-nav .owl-prev {
-   
+
 }
 
 .testimonial-carousel.owl-nav .owl-next {
@@ -2075,7 +2075,7 @@ a:active {
 
 .testimonial-carousel .owl-nav .owl-prev,
 .owl-nav .owl-next:hover {
-    
+
 }
 
 .testimonial-carousel.owl-dots .owl-dot {
@@ -2506,7 +2506,7 @@ hr,
 
 
 /*------------------------
- 12. Counter block 
+ 12. Counter block
 --------------------------*/
 
 .counter-block {}
@@ -2698,7 +2698,6 @@ hr,
 .box-table {
     padding: 16px 30px;
     margin: 0 -15px 15px;
-    border-color: ;
     border: 1px solid #dbdad8;
 }
 
@@ -2965,8 +2964,7 @@ hr,
     }
 }
 
-6. services style
-*/
+
 .service-one {
   padding-top: 85px;
   padding-bottom: 90px;
@@ -3070,6 +3068,8 @@ hr,
   display: -ms-flexbox;
   display: flex;
 }
+
+
 
 
 

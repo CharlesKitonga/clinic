@@ -24,6 +24,8 @@ Route::apiResources([
     'services' => 'API\ServicesController',
     'abouts' => 'API\AboutController',
     'teams' => 'API\TeamController',
+    'blogs' => 'API\BlogController',
+    'categories' => 'API\CategoryController',
     'teamleader' => 'API\TeamLeaderController',
     'galleries' => 'API\GalleryController',
     'partners' => 'API\PartnerController',

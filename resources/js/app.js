@@ -57,6 +57,8 @@ let routes = [
     { path: '/sliders', component: require('./components/Slider.vue').default },
     { path: '/admin-about', component: require('./components/About.vue').default },
     { path: '/admin-services', component: require('./components/Service.vue').default },
+    { path: '/admin-blog', component: require('./components/BlogCat.vue').default },
+    { path: '/admin-blogs', component: require('./components/Blogs.vue').default },
     { path: '/admin-faq', component: require('./components/Faq.vue').default },
     { path: '/admin-partners', component: require('./components/Partners.vue').default },
     { path: '/admin-clients', component: require('./components/Clients.vue').default },
