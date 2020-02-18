@@ -32,11 +32,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="about-section">
                             <h1>{{$abouts->heading}}</h1>
-                            <p>{{$abouts->description}}</p>
-                            <div class="about-list">
-                                <ul class=" angle angle-right mb30">
-                                    <li>{{$abouts->body}}</li>
-                                </ul>
+                            <p>{!! html_entity_decode(nl2br(e($abouts->description))) !!}</p>
                             </div>
                         </div>
                     </div>
