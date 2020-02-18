@@ -176,13 +176,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <router-link to="/admin-blog" class="nav-link ">
-                            <i class="fas fa-home nav-icon text-cyan"></i>
+                            <i class="fas fa-blog nav-icon text-cyan"></i>
                             <p>Blog Categories</p>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link to="/admin-blogs" class="nav-link ">
-                            <i class="fas fa-home nav-icon text-cyan"></i>
+                            <i class="fab fa-blogger-b nav-icon text-cyan"></i>
                             <p>Add Blogs</p>
                         </router-link>
                     </li>
