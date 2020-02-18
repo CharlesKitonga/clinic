@@ -95,6 +95,9 @@
 </template>
 
 <script>
+
+// Basic Use - Covers most scenarios
+import { VueEditor } from "vue2-editor";
     export default {
         name: "BlogCat",
         components: {

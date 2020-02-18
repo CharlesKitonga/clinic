@@ -2202,6 +2202,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue2_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-editor */ "./node_modules/vue2-editor/dist/vue2-editor.esm.js");
 //
 //
 //
@@ -2298,10 +2299,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+// Basic Use - Covers most scenarios
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "BlogCat",
   components: {
-    VueEditor: VueEditor
+    VueEditor: vue2_editor__WEBPACK_IMPORTED_MODULE_0__["VueEditor"]
   },
   data: function data() {
     return {
