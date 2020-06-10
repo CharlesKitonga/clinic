@@ -8,8 +8,7 @@ use App\Category;
 use Image;
 
 class CategoryController extends Controller
-{
-    /**
+{/**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -31,15 +30,19 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'category_name' => 'required|string|max:191',
-            'parent_id' => 'required|integer|max:3',
-            'description' => 'required|string',
+            'status' => 'required|integer',
         ]);
+        if (($request['status'] != 1)) {
 
+            $request['status'] = 0;
+
+        }else{
+            $status = 1;
+        }
         if($request->isMethod('post')){
             $categories = new Category;
             $categories->category_name=$request['category_name'];
-            $categories->parent_id=$request['parent_id'];
-            $categories->description=$request['description'];
+            $categories->status=$request['status'];
             //echo "<pre>";print_r($product);die;
             $categories->save();
         }
@@ -67,11 +70,18 @@ class CategoryController extends Controller
     {
 
         $categories = Category::findOrFail($id);
+
+        if (($request['status'] != 1)) {
+
+            $request['status'] = 0;
+
+        }else{
+            $status = 1;
+        }
         //validate product information
         $this->validate($request, [
             'category_name' => 'required|string|max:191',
-            'parent_id' => 'required|integer|max:3',
-            'description' => 'required|string',
+            'status' => 'required|integer',
         ]);
         //update c$categories
          $categories->update($request->all());

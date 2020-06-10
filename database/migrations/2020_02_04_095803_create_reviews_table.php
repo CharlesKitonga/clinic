@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('textarea');
+            $table->text('textarea');
             $table->string('emoji');
             $table->timestamps();
         });

@@ -24,7 +24,7 @@
                   <tbody>
                     <tr v-for="service in services.data" :key="service.id">
                       <td>{{service.service}}</td>
-                      <td>{{service.description}}</td>
+                      <td v-html="service.description"></td>
                       <td>
                         <img class="img-fluid mb-3" :src="'./images/services/'+service.photo" style="width:70px;" alt=" Avatar">
                       </td>
@@ -67,10 +67,9 @@
                                 class="form-control" :class="{ 'is-invalid': form.errors.has('service') }">
                             <has-error :form="form" field="service"></has-error>
                         </div>
+                        
                         <div class="form-group">
-                            <textarea v-model="form.description" type="text" name="description" placeholder="Short Info about the Service"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('description') }"></textarea>
-                            <has-error :form="form" field="description"></has-error>
+                            <vue-editor v-model="form.description"></vue-editor>
                         </div>
                           <div class="form-group row">
                             <label for="photo" class="col-sm-4 col-form-label">Service Photo</label>

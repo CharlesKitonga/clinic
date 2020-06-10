@@ -49,7 +49,7 @@
                                 <li><a href="{{url('/services')}}" title=" Services Offered">Our Services</a></li>
                                 <li class="has-sub"><a title="Blog ">Blog</a>
                                     <ul>
-                                        <li><a href="{{url('/blog-default')}}" title="Blog">Our Blogs</a></li>
+                                        <li><a href="{{url('/blogs')}}" title="Blog">Our Blogs</a></li>
                                         <li><a href="{{asset('/testimonials')}}" title="Testimonials">Testimonials</a></li>
                                         <li><a href="{{url('/faq')}}" title="FAQ">FAQ</a></li>
                                     </ul>

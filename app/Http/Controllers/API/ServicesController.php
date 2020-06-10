@@ -15,7 +15,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $services = Service::latest()->paginate(5);
+        $services = Service::latest()->paginate(15);
         //echo "<pre>";print_r($services);die;
         return $services;
     }
@@ -30,7 +30,7 @@ class ServicesController extends Controller
     {
         $this->validate($request, [
             'service' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
+            'description' => 'required|string|max:1000',
             'photo' => 'required|string|min:191',
         ]);
 
@@ -102,7 +102,7 @@ class ServicesController extends Controller
             }
 
         }
-        //update ser$services
+        //update services
         $services->update($request->all());
         //return ['message'=>'updating'];
     }

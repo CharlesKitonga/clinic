@@ -42,6 +42,7 @@ class UserController extends Controller
             'email' => 'required|string|email|max:191|unique:users',
             'type' => 'required|string|max:191',
             'bio' => 'string|max:191',
+            'photo' => 'sometimes',
             'password' => 'required|string|min:8'
         ]);
         //return $request->all();

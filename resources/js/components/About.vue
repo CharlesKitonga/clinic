@@ -54,8 +54,8 @@
             <div class="modal-dialog  modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" v-show="!editmode" id="aboutModalLabel">Add Home Details</h5>
-                        <h5 class="modal-title" v-show="editmode" id="aboutModalLabel">Update Home Info</h5>
+                        <h5 class="modal-title" v-show="!editmode" id="aboutModalLabel">Add About Page Details</h5>
+                        <h5 class="modal-title" v-show="editmode" id="aboutModalLabel">Update About Page Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -71,7 +71,7 @@
                             <vue-editor v-model="form.description"></vue-editor>
                         </div>
                           <div class="form-group row">
-                            <label for="photo" class="col-sm-4 col-form-label">Homepage Photo</label>
+                            <label for="photo" class="col-sm-4 col-form-label">About Page Photo</label>
                             <div class="col-sm-6">
                                 <input type="file" v-show="!editmode" accept="image/*" @change="uploadphoto" class="form-input"/>
                                 <input type="file" v-show="editmode" accept="image/*" @change="updateAboutPic"  class="form-input"/>
@@ -105,7 +105,6 @@ import { VueEditor } from "vue2-editor";
                     id: '',
                     heading: '',
                     description: '',
-                    body: '',
                     photo: ''
                 })
             }

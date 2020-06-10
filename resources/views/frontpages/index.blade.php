@@ -43,11 +43,6 @@
             </div>
         </div>
     </div>
-
-    <!-- about close -->
-    <!-- treatment start -->
-    @include('layouts.frontLayout.services')
-    <!-- treatment close -->
     <!-- features-start -->
     <section class="info-area style-two">
     <div class="about-bg-block ">
@@ -65,7 +60,7 @@
                     <div class="full-content">
                         <div class="section-title">
                         <h2>Why Choose Pearl White Dental Care</h2>
-                        <p>Lorem ipsum dolor sit ametas  consectetur adipisicing elita sed do eiusmod tempor incididunt <br> dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation aliqua enim ad minim <br> veniam quis nostrud exercitation ullamco.</p>
+                        <p>...for a healthy smile in every face</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

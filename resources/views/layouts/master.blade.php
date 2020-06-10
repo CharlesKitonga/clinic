@@ -92,100 +92,123 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <p>Services</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-about" class="nav-link ">
                             <i class="fas fa-info nav-icon text-cyan"></i>
                             <p>About Page</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-faq" class="nav-link ">
                             <i class="fas fa-question-circle nav-icon text-cyan"></i>
                             <p>FAQ</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-team" class="nav-link ">
                             <i class="fas fa-user-friends nav-icon text-cyan"></i>
                             <p>Add Team</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-teamleader" class="nav-link ">
                             <i class="fas fa-user-friends nav-icon text-cyan"></i>
                             <p>Team Leader Details</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-gallery" class="nav-link ">
                             <i class="fas fa-image nav-icon text-cyan"></i>
                             <p>Gallery</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/users" class="nav-link ">
                             <i class="fas fa-users nav-icon text-cyan"></i>
                             <p>Users</p>
                         </router-link>
                     </li>
+
                 </ul>
             </li>
             <li class="nav-item has-treeview ">
                 <a href="#" class="nav-link ">
-                <i class="nav-icon fas fa-cog text-green"></i>
-                <p>
-                    Company Details
-                    <i class="right fas fa-angle-left"></i>
-                </p>
+                    <i class="nav-icon fas fa-cog text-green"></i>
+                    <p>
+                        Company Details
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
                 </a>
                 <ul class="nav nav-treeview">
+
                     <li class="nav-item">
                         <router-link to="/clinic-home" class="nav-link ">
                             <i class="fas fa-home nav-icon text-cyan"></i>
                             <p>Add Homepage Info</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/sliders" class="nav-link ">
                             <i class="fas fa-address-card nav-icon text-cyan"></i>
                             <p>Add Slider Info</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-partners" class="nav-link ">
                             <i class="fas fa-hands-helping nav-icon text-cyan"></i>
                             <p>Partners</p>
                         </router-link>
                     </li>
+
                     <li class="nav-item">
                         <router-link to="/admin-clients" class="nav-link ">
                             <i class="fas fa-notes-medical nav-icon text-cyan"></i>
                             <p>Clients</p>
                         </router-link>
                     </li>
+
                 </ul>
             </li>
             <li class="nav-item has-treeview ">
                 <a href="#" class="nav-link ">
-                <i class="nav-icon fas fa-cog text-green"></i>
-                <p>
-                    Blog Details
-                    <i class="right fas fa-angle-left"></i>
-                </p>
+                    <i class="nav-icon fas fa-cog text-green"></i>
+                    <p>
+                        Blog Details
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
                 </a>
                 <ul class="nav nav-treeview">
+
                     <li class="nav-item">
                         <router-link to="/admin-blog" class="nav-link ">
                             <i class="fas fa-blog nav-icon text-cyan"></i>
                             <p>Blog Categories</p>
                         </router-link>
                     </li>
+
+
                     <li class="nav-item">
-                        <router-link to="/admin-blogs" class="nav-link ">
+                        <router-link to="/admin-tags" class="nav-link ">
+                            <i class="fas fa-blog nav-icon text-cyan"></i>
+                            <p>Tags</p>
+                        </router-link>
+                    </li>
+
+                    <li class="nav-item">
+                        <router-link to="/admin-articles" class="nav-link ">
                             <i class="fab fa-blogger-b nav-icon text-cyan"></i>
                             <p>Add Blogs</p>
                         </router-link>
                     </li>
+                    
                 </ul>
             </li>
             <li class="nav-item">

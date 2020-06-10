@@ -39,7 +39,6 @@ class HomeController extends Controller
             $home = new Home;
             $home->heading=$request['heading'];
             $home->description=$request['description'];
-            $home->points=$request['points'];
             //check for current photo
             $currentPhoto = $home->photo;
             //Upload Image

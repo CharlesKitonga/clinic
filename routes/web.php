@@ -29,11 +29,11 @@ Route::get('/faq', 'PagesController@Faq');
 Route::get('/leader', 'PagesController@Leader');
 Route::get('/gallery', 'PagesController@Gallery');
 Route::get('/treatment-single', 'PagesController@Treatment');
-Route::get('/blog-default', 'PagesController@Blogs');
-Route::get('/blog-single', 'PagesController@Blog');
+Route::get('/blogs', 'PagesController@Articles');
+Route::get('/single-article/{article}', 'PagesController@show')->name('articles.show');
 Route::match(['get','post'], '/contact-us','PagesController@Contact');
 //admin logout route
 Route::get('/admin-logout', 'PagesController@logout');
 
 //rendering vue routes to the web
-Route::get('{path}', 'HomeController@index')->where('path','([A-z\d-\/_.]+)?');
+Route::get('{path}', 'HomeController@index')->where('path', '.*');
