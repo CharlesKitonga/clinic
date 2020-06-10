@@ -85,6 +85,7 @@ class PagesController extends Controller
         //fetch gallery photos
         $galleries = Gallery::get();
         $galleries = json_decode(json_encode($galleries));
+
         return view('frontpages.gallery')->with(compact('galleries'));
     }
 
@@ -110,14 +111,24 @@ class PagesController extends Controller
 
     public function show(Article $article){
 
-        //get user or author
-        $user = Auth::user();
-        //dd($user)
-        
         $getTags = Tag::with('articles')->first();
         //dd($getTags);
+        
+        //fetch categories
+        $categories = Category::with('articles')->latest('updated_at')->limit(8)->get();
+        //dd($categories);
 
-        return view('frontpages.articles.show', ['article'=> $article], compact('user','getTags'));
+         //get old articles limit them to display only 4
+        $newArticles = Article::latest('updated_at')->limit(4)->get();
+        //dd($articles);
+
+        //fetch articles that are related ie in the same category
+        $relatedPosts = Article::with('category')->where('category_id', '=', $article->category->id)
+                                ->where('id', '!=', $article->id)
+                                ->limit(4)
+                                ->get();
+
+        return view('frontpages.articles.show', ['article'=> $article], compact('getTags', 'categories','newArticles','relatedPosts'));
 
     }
 

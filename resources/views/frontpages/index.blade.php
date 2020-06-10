@@ -106,7 +106,7 @@
             @foreach($galleries as $gallery)
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="ba-gallery">
-                        <img src="{{ asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
+                        <img src="{{asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
                         <div class="ba-left-btn"> <span class="left-btn">before</span></div>
                         <div class="ba-right-btn"><span class="right-btn">after</span></div>
                     </div>
