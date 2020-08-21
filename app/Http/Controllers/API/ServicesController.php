@@ -30,7 +30,7 @@ class ServicesController extends Controller
     {
         $this->validate($request, [
             'service' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
+            'description' => 'required|string|max:10000',
             'photo' => 'required|string|min:191',
         ]);
 
@@ -84,7 +84,7 @@ class ServicesController extends Controller
         //validate product information
         $this->validate($request, [
             'service' => 'required|string|max:191',
-            'description' => 'required|string|max:191',
+            'description' => 'required|string|max:10000',
         ]);
         //check for current photo
         $currentPhoto = $services->photo;

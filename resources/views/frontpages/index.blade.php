@@ -27,7 +27,7 @@
     </div>
     <!-- slider-close -->
     <!-- about start -->
-    <div class="space-medium bg-light">
+    <div class="space-small bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -65,22 +65,22 @@
                     <div class="full-content">
                         <div class="section-title">
                         <h2>Why Choose Pearl White Dental Care</h2>
-                        <p>Lorem ipsum dolor sit ametas  consectetur adipisicing elita sed do eiusmod tempor incididunt <br> dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation aliqua enim ad minim <br> veniam quis nostrud exercitation ullamco.</p>
+                        <p> Pearl White Dental Care is one of the best and modern Dental Clinics in Kericho County. <br> We offer unrivaled and quality, affordable dental services to clients based in Kericho and its environs  </p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <ul>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Affordable Dental Care</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To listen to your concerns in a relaxed atmosphere at our dental practice and give you easily understandable explanation.</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Offer a fair and transparent rates. No hidden extras! </li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Maintain a Great reputation. </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Affordable Dental Care </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To listen to your concerns in a relaxed atmosphere at our dental practice and give you easily understandable explanation. </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To Offer a fair and transparent rates. No hidden extras! </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To Maintain a Great reputation. </li>
                             </ul>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <ul class="left-side">
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To observe the latest cross infection prevention guidelines; Your safety is  our primary concern.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To observe the latest cross infection prevention guidelines; Your safety is  our primary concern. </li>
                                 <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To equip and maintain a State-of-the-art facility</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To keep you informed on the latest technological advancements as regard dental treatment and oral health in general.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To keep you informed on the latest technological advancements as regard dental treatment and oral health in general. </li>
                             </ul>
                         </div>
                     </div>

@@ -82,7 +82,7 @@ h5,
 h6 {
     font-weight: 400;
     color: #302e2e;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     margin: 0px 0px 15px 0px;
     letter-spacing: 0px;
 }
@@ -147,7 +147,7 @@ a:hover {
     font-size: 21px;
     font-weight: 400;
     line-height: 1.6;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     color: #B0D626;
     margin-bottom: 30px;
 }
@@ -164,7 +164,7 @@ a:hover {
 
 .blockquote-content p {
     font-style: italic;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     color: #a5d897;
     margin-bottom: 30px;
     line-height: 1.4;
@@ -181,7 +181,7 @@ a:hover {
 }
 
 blockquote p {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     color: #302e2e;
     font-weight: 400;
     font-size: 22px;
@@ -370,7 +370,7 @@ a img.aligncenter {
 -----------------------------------*/
 
 .btn {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 500;
@@ -396,12 +396,12 @@ a img.aligncenter {
 
 .btn-primary.focus,
 .btn-default:focus {
-    background-color: #ff8209;
+    background-color: #84cc70;
     color: #fff;
 }
 
 .btn-default {
-    background-color: #b0d629;
+    background-color: #96C346;
     color: #fff;
 }
 
@@ -412,7 +412,7 @@ a img.aligncenter {
 
 .btn-default.focus,
 .btn-primary:focus {
-    background-color: #b0d679;
+    background-color: #ff8209;
     color: #fff;
 }
 
@@ -1149,7 +1149,7 @@ img {
 
 #navigation {
     padding-top: 5px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -1570,7 +1570,7 @@ img {
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 10px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     color: #302e2e
 }
 
@@ -1710,7 +1710,7 @@ img {
 
 .left-btn,
 .right-btn {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'robotic', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2966,8 +2966,8 @@ hr,
 
 
 .service-one {
-  padding-top: 85px;
-  padding-bottom: 90px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 .service-one__single {
