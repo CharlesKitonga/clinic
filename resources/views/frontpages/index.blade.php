@@ -27,7 +27,7 @@
     </div>
     <!-- slider-close -->
     <!-- about start -->
-    <div class="space-medium bg-light">
+    <div class="space-small bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -43,6 +43,11 @@
             </div>
         </div>
     </div>
+
+    <!-- about close -->
+    <!-- treatment start -->
+    @include('layouts.frontLayout.services')
+    <!-- treatment close -->
     <!-- features-start -->
     <section class="info-area style-two">
     <div class="about-bg-block ">
@@ -60,22 +65,22 @@
                     <div class="full-content">
                         <div class="section-title">
                         <h2>Why Choose Pearl White Dental Care</h2>
-                        <p>...for a healthy smile in every face</p>
+                        <p> Pearl White Dental Care is one of the best and modern Dental Clinics in Kericho County. <br> We offer unrivaled and quality, affordable dental services to clients based in Kericho and its environs  </p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <ul>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Affordable Dental Care</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To listen to your concerns in a relaxed atmosphere at our dental practice and give you easily understandable explanation.</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Offer a fair and transparent rates. No hidden extras! </li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To Maintain a Great reputation. </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Affordable Dental Care </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To listen to your concerns in a relaxed atmosphere at our dental practice and give you easily understandable explanation. </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To Offer a fair and transparent rates. No hidden extras! </li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To Maintain a Great reputation. </li>
                             </ul>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <ul class="left-side">
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To observe the latest cross infection prevention guidelines; Your safety is  our primary concern.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To observe the latest cross infection prevention guidelines; Your safety is  our primary concern. </li>
                                 <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To equip and maintain a State-of-the-art facility</li>
-                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i>To keep you informed on the latest technological advancements as regard dental treatment and oral health in general.</li>
+                                <li><i class="fa fa-check-square-o" aria-hidden="true"></i> To keep you informed on the latest technological advancements as regard dental treatment and oral health in general. </li>
                             </ul>
                         </div>
                     </div>
@@ -106,7 +111,7 @@
             @foreach($galleries as $gallery)
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="ba-gallery">
-                        <img src="{{asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
+                        <img src="{{ asset('images/gallery/'.$gallery->photo) }}" alt="" class="img-responsive">
                         <div class="ba-left-btn"> <span class="left-btn">before</span></div>
                         <div class="ba-right-btn"><span class="right-btn">after</span></div>
                     </div>

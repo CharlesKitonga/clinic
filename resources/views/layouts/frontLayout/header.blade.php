@@ -1,3 +1,5 @@
+ <link rel="shortcut icon" href="images/icon1.png" type="">
+
 <header id="header" id="home">
 
 <div class="top-bar">
@@ -27,18 +29,11 @@
             </div>
         </div>
     </div>
-    <div class="header-wrapper">
+     <div class="header-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-                    <a href="index.php">
-                        <font face="Brush Script MT">
-                            <a href="index.php" style="font-size: 30px; color:#000066; ">Pearl White Dental Care</a><br>
-                        </font>
-                        <font face="Times new roman">
-                            <a href="index.php" style="font-size: 15px; color:#fff; ">...for a Healthy Smile to Every Face.</a>
-                        </font>
-                    </a>
+                    <a href="{{url('/')}}"><img src="images/mainlogo.png" alt=""></a>
                 </div>
                 <div class="col-lg-9 col-md-10 col-sm-12 col-xs-12">
                     <div class="navigation">

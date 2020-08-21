@@ -1,4 +1,4 @@
-<div class="space-medium">
+<div class="space-small">
     <section class="service-one">
             <div class="container">
                 <div class="row">
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <!-- page-header-close -->
-            <div class="space-medium">
+            <div class="space-small">
                 <section class="service-one">
                     <div class="container">
                         <div class="column-5__row">

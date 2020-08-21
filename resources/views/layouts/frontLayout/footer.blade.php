@@ -5,7 +5,7 @@
                 <!-- footer-contactinfo-start -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="footer-widget">
-                        <div class="mb30"><img src="./images/logo.png" alt="" class="img-responsive"></div>
+                        <div class="mb30"><img src="./images/footerlogo.png" alt="" class="img-responsive"></div>
                         <p>State of the art modern dental clinic, offering excellent services Pearl White Dental Care, Temple Rd, Kericho Dental Clinic </p>
                         <a href="{{url('/about-us')}}" class="btn btn-default btn-sm">meet our team</a>
                     </div>
