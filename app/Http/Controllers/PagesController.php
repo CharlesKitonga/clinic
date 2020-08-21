@@ -12,10 +12,14 @@ use App\Partner;
 use App\Gallery;
 use App\Appointment;
 use App\Contact;
+use App\Category;
+use App\Article;
 use App\Team;
+use App\Tag;
 use App\TeamLeader;
 use App\Topic;
 use Session;
+use Auth;
 
 class PagesController extends Controller
 {
@@ -33,7 +37,7 @@ class PagesController extends Controller
         $testimonials = Review::get();
         $testimonials = json_decode(json_encode($testimonials));
         //fetch gallery photos
-        $galleries = Gallery::get();
+        $galleries = Gallery::latest('created_at')->limit(4)->get();
         $galleries = json_decode(json_encode($galleries));
         //fetch partner info
         $partners = Partner::get();
@@ -76,20 +80,56 @@ class PagesController extends Controller
         $questions = json_decode(json_encode($questions));
         return view('frontpages.faq')->with(compact('questions'));
     }
+
     public function Gallery(){
         //fetch gallery photos
         $galleries = Gallery::get();
         $galleries = json_decode(json_encode($galleries));
+
         return view('frontpages.gallery')->with(compact('galleries'));
     }
+
     public function Treatment(){
         return view('frontpages.treatment-single');
     }
-    public function Blogs(){
-        return view('frontpages.blog-default');
+
+    public function Articles(){
+        //get all articles limit them to display only 4
+        $articles = Article::latest('updated_at')->limit(4)->get();
+        //dd($articles);
+
+        //get old articles limit them to display only 4
+        $oldArticles = Article::latest('created_at')->limit(4)->get();
+        //dd($articles);
+
+        //fetch categories
+        $categories = Category::with('articles')->latest('updated_at')->limit(8)->get();
+        //dd($categories);
+        
+        return view('frontpages.articles.index', compact('articles', 'categories','oldArticles'));
     }
-    public function Blog(){
-        return view('frontpages.blog-single');
+
+    public function show(Article $article){
+
+        $getTags = Tag::with('articles')->first();
+        //dd($getTags);
+        
+        //fetch categories
+        $categories = Category::with('articles')->latest('updated_at')->limit(8)->get();
+        //dd($categories);
+
+         //get old articles limit them to display only 4
+        $newArticles = Article::latest('updated_at')->limit(4)->get();
+        //dd($articles);
+
+        //fetch articles that are related ie in the same category
+        $relatedPosts = Article::with('category')->where('category_id', '=', $article->category->id)
+                                ->where('id', '!=', $article->id)
+                                ->limit(4)
+                                ->get();
+
+        return view('frontpages.articles.show', ['article'=> $article], compact('getTags', 'categories','newArticles','relatedPosts'));
+
     }
 
     public function Appointment(Request $request){

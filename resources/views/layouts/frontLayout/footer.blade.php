@@ -18,7 +18,7 @@
                         <ul>
                             <li><a href="{{url('/about-us')}}">About us </a></li>
                             <li><a href="{{url('/services')}}">Treatments </a></li>
-                            <li><a href="{{url('/blog-default')}}">Blog</a></li>
+                            <li><a href="{{url('/blogs')}}">Blog</a></li>
                             <li><a href="{{url('/testimonials')}}">Testimonials </a></li>
                             <li> <a href="{{url('/faq')}}">FAQ</a></li>
                         </ul>

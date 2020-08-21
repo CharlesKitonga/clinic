@@ -4,11 +4,12 @@
     <div class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="page-section">
                         <h1 class="page-title ">Treatments</h1>
                         <p>State of the art modern dental clinic offering excellent services.</p>
-                        <a href="#" class="btn btn-primary">make an appointment</a>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                            Make an Appointment
+                        </button>
                     </div>
                 </div>
             </div>
@@ -54,7 +55,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                {{$service->description}}
+                                {!! html_entity_decode(nl2br(e($service->description))) !!}
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -24,12 +24,13 @@ Route::apiResources([
     'services' => 'API\ServicesController',
     'abouts' => 'API\AboutController',
     'teams' => 'API\TeamController',
-    'blogs' => 'API\BlogController',
+    'articles' => 'API\ArticlesController',
     'categories' => 'API\CategoryController',
     'teamleader' => 'API\TeamLeaderController',
     'galleries' => 'API\GalleryController',
     'partners' => 'API\PartnerController',
     'clients' => 'API\ClientsController',
+    'tags' => 'API\TagsController',
     'topics' => 'API\TopicController'
 
 ]);

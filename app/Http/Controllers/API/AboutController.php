@@ -38,7 +38,6 @@ class AboutController extends Controller
             $about = new About;
             $about->heading=$request['heading'];
             $about->description=$request['description'];
-            $about->body=$request['body'];
             //check for current photo
             $currentPhoto = $about->photo;
             //Upload Image

@@ -21,7 +21,8 @@ const Toast = Swal.mixin({
       toast.addEventListener('mouseleave', Swal.resumeTimer)
     }
   })
-  window.Toast = Toast;
+window.Toast = Toast;
+
 import VueProgressBar from 'vue-progressbar';
 const options = {
     color: '#228B22',
@@ -37,6 +38,7 @@ const options = {
     inverse: false
   }
 Vue.use(VueProgressBar, options)
+
 import moment from 'moment';//for displaying date and time nicely
 import { Form, HasError, AlertError } from 'vform';
 
@@ -58,7 +60,8 @@ let routes = [
     { path: '/admin-about', component: require('./components/About.vue').default },
     { path: '/admin-services', component: require('./components/Service.vue').default },
     { path: '/admin-blog', component: require('./components/BlogCat.vue').default },
-    { path: '/admin-blogs', component: require('./components/Blogs.vue').default },
+    { path: '/admin-tags', component: require('./components/Tags.vue').default },
+    { path: '/admin-articles', component: require('./components/Articles.vue').default },
     { path: '/admin-faq', component: require('./components/Faq.vue').default },
     { path: '/admin-partners', component: require('./components/Partners.vue').default },
     { path: '/admin-clients', component: require('./components/Clients.vue').default },
@@ -77,8 +80,18 @@ const router = new VueRouter({
 Vue.filter('upText', function(text){
     return text.charAt(0).toUpperCase() + text.slice(1)
 });
+
 Vue.filter('myDate', function(created){
     return moment(created).format('MMMM Do YYYY'); // December 10th 2019
+});
+
+
+Vue.filter('truncate', function (text, length, suffix) {
+    if (text.length > length) {
+        return text.substring(0, length) + suffix;
+    } else {
+        return text;
+    }
 });
 
 window.Fire =  new Vue();

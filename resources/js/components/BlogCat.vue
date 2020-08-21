@@ -15,17 +15,15 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                        <th>Heading</th>
-                        <th>Description</th>
-                        <th>Image</th>
+                        <th>Category Name</th>
+                        <th>Active</th>
                         <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr v-for="category in categories.data" :key="category.id">
                       <td>{{category.category_name}}</td>
-                      <td>{{category.parent_id}}</td>
-                      <td v-html="category.description"></td>
+                      <td>{{category.status}}</td>
                       <td>
                           <a href="#" @click="editModal(category)">
                               <i class="fa fa-edit text-blue"></i>
@@ -65,21 +63,10 @@
                                 class="form-control" :class="{ 'is-invalid': form.errors.has('category_name') }">
                             <has-error :form="form" field="category_name"></has-error>
                         </div>
-                        <div class="form-group">
-                            <select name="type" v-model="form.parent_id" id="parent_id" class="form-control"
-                             :class="{ 'is-invalid': form.errors.has('parent_id') }">
-                                <option value="">Select Category Level</option>
-                                <option value="0">Main category</option>
-                                <option v-for="category in categories.data" :key="category.id" :value="category.id ">
-                                    {{category.category_name}}
-                                </option>
-                            </select>
-                            <has-error :form="form" field="parent_id"></has-error>
-                        </div>
-                        <div class="form-group">
-                            <textarea v-model="form.description" type="text" name="description" placeholder="Short Info about the category"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('description') }"></textarea>
-                            <has-error :form="form" field="description"></has-error>
+                        <div class="form-check">
+                            <input  v-model="form.status" type="checkbox" value="1" class="form-check-input" :class="{ 'is-invalid': form.errors.has('status') }" >
+                            <label class="form-check-label" for="status">Enable Category</label>
+                            <has-error :form="form" field="status"></has-error>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -113,32 +100,11 @@ import { VueEditor } from "vue2-editor";
                 form: new Form({
                     id: '',
                     category_name: '',
-                    parent_id: '',
-                    description: ''
+                    status: ''
                 })
             }
         },
         methods: {
-            updateBlogPic(e){
-                //console.log('uploading');
-                //grab the file we are uploading
-                let file = e.target.files[0];
-                console.log(file);
-                //convert the file to base63
-                let reader = new FileReader();
-                if (file['size'] < 2111775) {
-                    reader.onloadend = (file) =>{
-                        //console.log('RESULT', reader.result);
-                        this.form.photo = reader.result;
-                    }
-                    reader.readAsDataURL(file);
-                }else{
-                    Swal.fire("Oops...", "You are uploading a large file!", "error");
-
-                }
-
-            },
-
             updateBlog(){
                 this.$Progress.start();
                 this.form.put('api/categories/'+this.form.id)
@@ -194,25 +160,6 @@ import { VueEditor } from "vue2-editor";
                         }
                     })
             },
-            uploadphoto(e){
-                //console.log('uploading');
-                //grab the file we are uploading
-                let file = e.target.files[0];
-                console.log(file);
-                //convert the file to base63
-                let reader = new FileReader();
-                if (file['size'] < 2111775) {
-                    reader.onloadend = (file) =>{
-                        //console.log('RESULT', reader.result);
-                        this.form.photo = reader.result;
-                    }
-                    reader.readAsDataURL(file);
-                }else{
-                    Swal.fire("Oops...", "You are uploading a large file!", "error");
-
-                }
-
-            },
             loadBlogDetails(){
                 axios.get("api/categories").then(({ data }) => (this.categories = data))
             },
@@ -223,10 +170,10 @@ import { VueEditor } from "vue2-editor";
                 .then(()=>{
                     Fire.$emit('AfterCreate');
                     //  [Product.vue specific] When Product.vue is finish loading finish the progress bar
-                    $('#homeModal').modal('hide')
+                    $('#blogModal').modal('hide')
                     Toast.fire({
                         icon: 'success',
-                        title: 'Home Details Added Successfully'
+                        title: 'Category Added Successfully'
                     })
                     this.$Progress.finish();
                 })

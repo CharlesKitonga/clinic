@@ -41,7 +41,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        {{$service->description}}
+                                        {!! html_entity_decode(nl2br(e($service->description))) !!}
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
