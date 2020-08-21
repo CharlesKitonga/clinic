@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env(''),
-            'host' => env('DB_HOST', ''),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', ''),
-            'username' => env('DB_USERNAME', ''),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('mysql://bbb3472521e4c1:642e9894@us-cdbr-east-06.cleardb.net/heroku_718c4f927d8f731?reconnect=true'),
+            'host' => env('DB_HOST', 'santatilahm.com'),
+            'port' => env('DB_PORT', '2083'),
+            'database' => env('DB_DATABASE', 'santatil_clinic'),
+            'username' => env('DB_USERNAME', 'santatil_santa'),
+            'password' => env('DB_PASSWORD', 'Database@20'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
