@@ -200,12 +200,10 @@
                     <div class="item">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-8  col-xs-8">
                             <div class="testimonial-content">
-                                <div class="">
                                 <div class="testimonial-pic">
                                     <div class="img-circle" style = "color: #128512;">
                                         <img src="{{ asset('images/partners/'.$partner->photo) }}" alt="" class="img-responsive">
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -215,6 +213,7 @@
             </div>
         </div>
     </div>
+    
     <!-- testimonials-close  -->
 @endsection
 

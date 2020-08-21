@@ -38,7 +38,7 @@
                                     <div class="post-header">
                                         <!-- post header -->
                                         <h1 class="post-title"><a href="{{$getArticle->path()}}" class="title">{{$getArticle->heading}}</a></h1>
-                                        <div class="meta"> <span class="meta-date"> {{$getArticle->created_at->diffForHumans()}}</span> <span class="meta-comments">(22) Comments</span> </div>
+                                        <div class="meta"> <span class="meta-date"> {{$getArticle->created_at->diffForHumans()}}</span> <span class="meta-comments"></span> </div>
                                     </div>
                                     <!-- /.post header -->
                                     <p>{!! Illuminate\Support\Str::limit(html_entity_decode(nl2br(e($getArticle->description))),$limit = 250, $end = '...' ) !!}</p>
@@ -57,20 +57,6 @@
                                 <div class="blocquote-author">- Maroon benessisy </div>
                             </div>
                         </div>
-
-                        <!-- pagination start -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="st-pagination">
-                                <ul class="pagination">
-                                    <li><a href="#" aria-label="previous"><span aria-hidden="true">Previous</span></a> </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li> <a href="#" aria-label="Next"><span aria-hidden="true">Next</span></a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- pagination close -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
