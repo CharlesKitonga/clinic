@@ -15,7 +15,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $homes = Slider::latest()->paginate(5);
+        $homes = Slider::latest()->paginate(25);
         //echo "<pre>";print_r($homes);die;
         return $homes;
     }

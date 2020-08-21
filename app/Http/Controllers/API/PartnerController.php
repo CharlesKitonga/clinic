@@ -15,7 +15,7 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        $partners = Partner::latest()->paginate(5);
+        $partners = Partner::latest()->paginate(25);
         //echo "<pre>";print_r($partners);die;
         return $partners;
     }

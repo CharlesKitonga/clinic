@@ -15,7 +15,7 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $teams = Team::latest()->paginate(5);
+        $teams = Team::latest()->paginate(25);
         //echo "<pre>";print_r($teams);die;
         return $teams;
     }

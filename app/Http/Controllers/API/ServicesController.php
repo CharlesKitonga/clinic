@@ -15,7 +15,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $services = Service::latest()->paginate(5);
+        $services = Service::latest()->paginate(25);
         //echo "<pre>";print_r($services);die;
         return $services;
     }

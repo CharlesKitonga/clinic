@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $homes = Home::latest()->paginate(5);
+        $homes = Home::latest()->paginate(15);
         //echo "<pre>";print_r($homes);die;
         return $homes;
     }

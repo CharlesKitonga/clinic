@@ -14,7 +14,7 @@ class ClientsController extends Controller
     */
    public function index()
    {
-       $clients = Client::latest()->paginate(5);
+       $clients = Client::latest()->paginate(15);
        //echo "<pre>";print_r($clients);die;
        return $clients;
    }

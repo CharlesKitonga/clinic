@@ -15,7 +15,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        $tags= Tag::latest()->paginate(5);
+        $tags= Tag::latest()->paginate(25);
         //echo "<pre>";print_r($tags;die;
         return $tags;
     }

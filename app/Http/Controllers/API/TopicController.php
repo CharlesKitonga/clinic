@@ -15,7 +15,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        $topics = Topic::latest()->paginate(5);
+        $topics = Topic::latest()->paginate(25);
         //echo "<pre>";print_r($topics);die;
         return $topics;
     }

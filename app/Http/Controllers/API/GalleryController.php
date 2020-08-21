@@ -15,7 +15,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $gallery = Gallery::latest()->paginate(5);
+        $gallery = Gallery::latest()->paginate(25);
         //echo "<pre>";print_r($gallery);die;
         return $gallery;
     }
