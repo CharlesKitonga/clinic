@@ -71,7 +71,9 @@
     <div class="tiny-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">Dentalclinic © 2020 All Rights Reserved.</div>
+                <div class="col-md-12"> 
+			        <p>© <script>document.write(new Date().getFullYear());</script> PearlWhiteDental clinic. All rights reserved </p>
+                </div>
             </div>
             <!-- tiny-footer-start -->
         </div>
